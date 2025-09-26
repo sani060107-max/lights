@@ -1,0 +1,189 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #F9F7F1;
+  color: #1E293B;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #166534;
+  color: white;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+/* Dark Mode Toggle */
+.dark-toggle {
+  margin-left: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s;
+}
+.dark-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #166534;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Hero Section with Pattern */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: 
+    linear-gradient(rgba(22, 101, 52, 0.85), rgba(22, 101, 52, 0.85)),
+    url('https://www.toptal.com/designers/subtlepatterns/uploads/islamic.png') repeat;
+  background-size: 200px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Content */
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+.content h2 {
+  margin-bottom: 1rem;
+  color: #166534;
+}
+
+/* Footer with Pattern */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0F766E url('https://www.toptal.com/designers/subtlepatterns/uploads/moroccan-flower.png') repeat;
+  background-size: 150px;
+  color: white;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  border-top: 3px solid #D4AF37;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Highlighted Inline Links */
+.highlight {
+  color: #166534;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ---------------- Dark Mode ---------------- */
+body.dark {
+  background-color: #1E293B;
+  color: #F9F7F1;
+}
+
+body.dark .navbar {
+  background: #0F172A;
+}
+
+body.dark .nav-links a {
+  color: #F9F7F1;
+}
+
+body.dark .nav-links a:hover,
+body.dark .nav-links .active {
+  color: #D4AF37;
+}
+
+body.dark .hero {
+  background: 
+    linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)),
+    url('https://www.toptal.com/designers/subtlepatterns/uploads/islamic.png') repeat;
+  background-size: 200px;
+  color: #F9F7F1;
+}
+
+body.dark .content {
+  background: #334155;
+  color: #F9F7F1;
+}
+
+body.dark footer {
+  background: #1E293B url('https://www.toptal.com/designers/subtlepatterns/uploads/moroccan-flower.png') repeat;
+  background-size: 150px;
+  color: #F9F7F1;
+  border-top: 3px solid #D4AF37;
+}
